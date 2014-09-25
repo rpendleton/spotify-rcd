@@ -13,6 +13,8 @@
 
 + (void)load
 {
+	NSLog(@"SpotifyRCD loaded");
+	
 	unsetenv("DYLD_INSERT_LIBRARIES");
 	[self jr_swizzleMethod:@selector(initWithSource:) withMethod:@selector(is_initWithSource:) error:nil];
 }

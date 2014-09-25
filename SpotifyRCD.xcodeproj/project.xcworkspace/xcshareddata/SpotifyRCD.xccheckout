@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>18CEBF18-C38E-4F90-AA9E-B0A66B22E34F</string>
+	<key>IDESourceControlProjectName</key>
+	<string>SpotifyRCD</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>019EED4D7E8CDB6E164DFE40F835AE16F8607CDF</key>
+		<string>https://github.com/ryanp-me/spotify-rcd.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>SpotifyRCD.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>019EED4D7E8CDB6E164DFE40F835AE16F8607CDF</key>
+		<string>../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/ryanp-me/spotify-rcd.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>019EED4D7E8CDB6E164DFE40F835AE16F8607CDF</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>019EED4D7E8CDB6E164DFE40F835AE16F8607CDF</string>
+			<key>IDESourceControlWCCName</key>
+			<string>SpotifyRCD</string>
+		</dict>
+	</array>
+</dict>
+</plist>
