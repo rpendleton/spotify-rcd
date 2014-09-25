@@ -22,6 +22,9 @@ $ sudo chown -R $USER:staff "/Application Support/Inline-Studios/loader/tweaks"
 </dict>
 ```
 
-- Since the application has been modified, it must be re-codesigned. This can be done using a fake certificate with the following line: `$ sudo codesign -fs - /System/Library/CoreServices/rcd.app`
+- Since the application has been modified, it must be re-codesigned. This can be done using a fake certificate with the following line:
+```
+$ sudo codesign -fs - /System/Library/CoreServices/rcd.app
+```
 
 - Restart your computer and test the Play button. It should now open Spotify instead of iTunes. If you install an OS upgrade, you may have to redo the last two steps.
