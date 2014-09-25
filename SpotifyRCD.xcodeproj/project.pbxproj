@@ -1,0 +1,333 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		76491CB918E0BCB800803BC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76491CB818E0BCB800803BC4 /* Cocoa.framework */; };
+		76491CC318E0BCB800803BC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76491CC118E0BCB800803BC4 /* InfoPlist.strings */; };
+		7686988419D392BB00BBECD9 /* next.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7686988019D392BB00BBECD9 /* next.wav */; };
+		7686988519D392BB00BBECD9 /* pause.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7686988119D392BB00BBECD9 /* pause.wav */; };
+		7686988619D392BB00BBECD9 /* play.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7686988219D392BB00BBECD9 /* play.wav */; };
+		7686988719D392BB00BBECD9 /* prev.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7686988319D392BB00BBECD9 /* prev.wav */; };
+		76EF46C618E0C6480025394C /* NSAppleScript+SpotifyRCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF46C518E0C6480025394C /* NSAppleScript+SpotifyRCD.m */; };
+		76EF46C918E0C6660025394C /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF46C818E0C6660025394C /* JRSwizzle.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		76491CB518E0BCB800803BC4 /* SpotifyRCD.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpotifyRCD.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
+		76491CB818E0BCB800803BC4 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = System/Library/Frameworks/Cocoa.framework; sourceTree = SDKROOT; };
+		76491CBB18E0BCB800803BC4 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		76491CBC18E0BCB800803BC4 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		76491CBD18E0BCB800803BC4 /* AppKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppKit.framework; path = System/Library/Frameworks/AppKit.framework; sourceTree = SDKROOT; };
+		76491CC018E0BCB800803BC4 /* SpotifyRCD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpotifyRCD-Info.plist"; sourceTree = "<group>"; };
+		76491CC218E0BCB800803BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		76491CC418E0BCB800803BC4 /* SpotifyRCD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotifyRCD-Prefix.pch"; sourceTree = "<group>"; };
+		7686988019D392BB00BBECD9 /* next.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = next.wav; sourceTree = "<group>"; };
+		7686988119D392BB00BBECD9 /* pause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pause.wav; sourceTree = "<group>"; };
+		7686988219D392BB00BBECD9 /* play.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = play.wav; sourceTree = "<group>"; };
+		7686988319D392BB00BBECD9 /* prev.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = prev.wav; sourceTree = "<group>"; };
+		76EF46C418E0C6480025394C /* NSAppleScript+SpotifyRCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAppleScript+SpotifyRCD.h"; sourceTree = "<group>"; };
+		76EF46C518E0C6480025394C /* NSAppleScript+SpotifyRCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAppleScript+SpotifyRCD.m"; sourceTree = "<group>"; };
+		76EF46C718E0C6660025394C /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
+		76EF46C818E0C6660025394C /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		76491CB218E0BCB800803BC4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76491CB918E0BCB800803BC4 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		76491CAC18E0BCB800803BC4 = {
+			isa = PBXGroup;
+			children = (
+				76491CBE18E0BCB800803BC4 /* SpotifyRCD */,
+				76491CB718E0BCB800803BC4 /* Frameworks */,
+				76491CB618E0BCB800803BC4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		76491CB618E0BCB800803BC4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				76491CB518E0BCB800803BC4 /* SpotifyRCD.bundle */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		76491CB718E0BCB800803BC4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76491CB818E0BCB800803BC4 /* Cocoa.framework */,
+				76491CBA18E0BCB800803BC4 /* Other Frameworks */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		76491CBA18E0BCB800803BC4 /* Other Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				76491CBB18E0BCB800803BC4 /* Foundation.framework */,
+				76491CBC18E0BCB800803BC4 /* CoreData.framework */,
+				76491CBD18E0BCB800803BC4 /* AppKit.framework */,
+			);
+			name = "Other Frameworks";
+			sourceTree = "<group>";
+		};
+		76491CBE18E0BCB800803BC4 /* SpotifyRCD */ = {
+			isa = PBXGroup;
+			children = (
+				7686987F19D392BB00BBECD9 /* Sounds */,
+				76491CBF18E0BCB800803BC4 /* Supporting Files */,
+				76EF46C418E0C6480025394C /* NSAppleScript+SpotifyRCD.h */,
+				76EF46C518E0C6480025394C /* NSAppleScript+SpotifyRCD.m */,
+			);
+			path = SpotifyRCD;
+			sourceTree = "<group>";
+		};
+		76491CBF18E0BCB800803BC4 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				76EF46C718E0C6660025394C /* JRSwizzle.h */,
+				76EF46C818E0C6660025394C /* JRSwizzle.m */,
+				76491CC018E0BCB800803BC4 /* SpotifyRCD-Info.plist */,
+				76491CC118E0BCB800803BC4 /* InfoPlist.strings */,
+				76491CC418E0BCB800803BC4 /* SpotifyRCD-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		7686987F19D392BB00BBECD9 /* Sounds */ = {
+			isa = PBXGroup;
+			children = (
+				7686988019D392BB00BBECD9 /* next.wav */,
+				7686988119D392BB00BBECD9 /* pause.wav */,
+				7686988219D392BB00BBECD9 /* play.wav */,
+				7686988319D392BB00BBECD9 /* prev.wav */,
+			);
+			name = Sounds;
+			path = sounds;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		76491CB418E0BCB800803BC4 /* SpotifyRCD */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 76491CC718E0BCB800803BC4 /* Build configuration list for PBXNativeTarget "SpotifyRCD" */;
+			buildPhases = (
+				76491CB118E0BCB800803BC4 /* Sources */,
+				76491CB218E0BCB800803BC4 /* Frameworks */,
+				76491CB318E0BCB800803BC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SpotifyRCD;
+			productName = SpotifyRCD;
+			productReference = 76491CB518E0BCB800803BC4 /* SpotifyRCD.bundle */;
+			productType = "com.apple.product-type.bundle";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		76491CAD18E0BCB800803BC4 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0510;
+				ORGANIZATIONNAME = "Inline-Studios";
+			};
+			buildConfigurationList = 76491CB018E0BCB800803BC4 /* Build configuration list for PBXProject "SpotifyRCD" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 76491CAC18E0BCB800803BC4;
+			productRefGroup = 76491CB618E0BCB800803BC4 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				76491CB418E0BCB800803BC4 /* SpotifyRCD */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		76491CB318E0BCB800803BC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7686988719D392BB00BBECD9 /* prev.wav in Resources */,
+				76491CC318E0BCB800803BC4 /* InfoPlist.strings in Resources */,
+				7686988419D392BB00BBECD9 /* next.wav in Resources */,
+				7686988619D392BB00BBECD9 /* play.wav in Resources */,
+				7686988519D392BB00BBECD9 /* pause.wav in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		76491CB118E0BCB800803BC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				76EF46C918E0C6660025394C /* JRSwizzle.m in Sources */,
+				76EF46C618E0C6480025394C /* NSAppleScript+SpotifyRCD.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		76491CC118E0BCB800803BC4 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				76491CC218E0BCB800803BC4 /* en */,
+			);
+			name = InfoPlist.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		76491CC518E0BCB800803BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		76491CC618E0BCB800803BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		76491CC818E0BCB800803BC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpotifyRCD/SpotifyRCD-Prefix.pch";
+				INFOPLIST_FILE = "SpotifyRCD/SpotifyRCD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Inline-Studios/loader/tweaks";
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Debug;
+		};
+		76491CC918E0BCB800803BC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				DEPLOYMENT_LOCATION = YES;
+				DSTROOT = /;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "SpotifyRCD/SpotifyRCD-Prefix.pch";
+				INFOPLIST_FILE = "SpotifyRCD/SpotifyRCD-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Inline-Studios/loader/tweaks";
+				MACH_O_TYPE = mh_dylib;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = bundle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		76491CB018E0BCB800803BC4 /* Build configuration list for PBXProject "SpotifyRCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76491CC518E0BCB800803BC4 /* Debug */,
+				76491CC618E0BCB800803BC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		76491CC718E0BCB800803BC4 /* Build configuration list for PBXNativeTarget "SpotifyRCD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				76491CC818E0BCB800803BC4 /* Debug */,
+				76491CC918E0BCB800803BC4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 76491CAD18E0BCB800803BC4 /* Project object */;
+}
