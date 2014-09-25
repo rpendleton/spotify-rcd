@@ -18,7 +18,7 @@ $ sudo chown -R $USER:staff "/Application Support/Inline-Studios/loader/tweaks"
 <key>LSEnvironment</key>
 <dict>
         <key>DYLD_INSERT_LIBRARIES</key>
-        <string>/Library/Application Support/Inline-Studios/loader/tweaks/SpotifyRCD.bundle/Contents/MacOS</string>
+        <string>/Library/Application Support/Inline-Studios/loader/tweaks/SpotifyRCD.bundle/Contents/MacOS/SpotifyRCD</string>
 </dict>
 ```
 
