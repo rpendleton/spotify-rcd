@@ -278,12 +278,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpotifyRCD/SpotifyRCD-Prefix.pch";
 				INFOPLIST_FILE = "SpotifyRCD/SpotifyRCD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Inline-Studios/loader/tweaks";
 				MACH_O_TYPE = mh_dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
@@ -294,12 +291,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				COMBINE_HIDPI_IMAGES = YES;
-				DEPLOYMENT_LOCATION = YES;
-				DSTROOT = /;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "SpotifyRCD/SpotifyRCD-Prefix.pch";
 				INFOPLIST_FILE = "SpotifyRCD/SpotifyRCD-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Application Support/Inline-Studios/loader/tweaks";
 				MACH_O_TYPE = mh_dylib;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;

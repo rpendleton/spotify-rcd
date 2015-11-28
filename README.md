@@ -1,36 +1,52 @@
 mac-spotify-rcd
 ===============
 
-Makes the playback control keys on a MacBook Pro open spotify instead of iTunes
+Makes the playback control keys on a MacBook Pro open spotify instead of iTunes.
 
-### Installation
+## Installation
 
-- Create the tweaks directory:
+- Automated Installation: This project contains an `install.sh` script that will
+  executes all of the necessary commands to build, install, and activate the
+  tweak. Simply run the script in Terminal to use it:
 
-```bash
-$ sudo /bin/mkdir -p /Library/Application\ Support/Inline-Studios/loader/tweaks/SpotifyRCD.bundle/Contents
-$ sudo /bin/mkdir -p /Library/Application\ Support/Inline-Studios/loader/tweaks/SpotifyRCD.bundle/Contents/MacOS
-$ sudo /bin/mkdir -p /Library/Application\ Support/Inline-Studios/loader/tweaks/SpotifyRCD.bundle/Contents/Resources
+  ```
+  $ git clone https://github.com/rpendleton/spotify-rcd.git
+  $ cd spotify-rcd
+  $ ./install.sh
+  ```
+
+- Manual Installation: If you prefer to install the plugin manually, it is
+  possible to do so.
+
+  - Compile the tweak and copy the resulting bundle to
+    `/Library/Application Support/Tweaks`
+  - Copy `/System/Library/LaunchAgents/com.apple.rcd.plist` to
+    `/Library/LaunchAgents/com.apple.rcd.patched.plist`
+  - In the copied plist, change the `Label` to `com.apple.rcd.patched`
+  - Add the following section to the copied plist:
+
+    ```
+    <key>Disabled</key>
+    <true/>
+    <key>EnvironmentVariables</key>
+    <dict>
+            <key>DYLD_INSERT_LIBRARIES</key>
+            <string>/Library/Application Support/Tweaks/SpotifyRCD.bundle/Contents/MacOS/SpotifyRCD</string>
+    </dict>
+    ```
+
+  - Unload the system LaunchAgent, and load the modified one:
+
+    ```
+    $ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
+    $ launchctl load -w /Library/LaunchAgents/com.apple.rcd.patched.plist
+    ```
+
+## Disabling
+
+To disable the tweak, simply unload the modified plist and load the original:
+
 ```
-
-- Compile the project. It will attempt to install itself in `/Application Support/Inline-Studios/loader/tweaks`. If you changed the path above, you'll want to fix this in the Xcode build settings, or copy the product manually.
-
-- Copy `/System/Library/LaunchAgents/com.apple.rcd.plist` to somewhere you can edit it, or use an editor that supports editing with root privileges. Make sure you replace it after editing it. (You may want to back it up as well.) The following needs to be added in order to inject the plugin on startup: 
-
+$ launchctl unload -w /Library/LaunchAgents/com.apple.rcd.patched.plist
+$ launchctl load -w /System/Library/LaunchAgents/com.apple.rcd.plist
 ```
-<key>EnvironmentVariables</key>
-<dict>
-        <key>DYLD_INSERT_LIBRARIES</key>
-        <string>/Library/Application Support/Inline-Studios/loader/tweaks/SpotifyRCD.bundle/Contents/MacOS/SpotifyRCD</string>
-</dict>
-```
-
-- Next, restart your computer or manually restart the daemon:
-
-```bash
-$ launchctl unload /System/Library/LaunchAgents/com.apple.rcd.plist
-$ launchctl load /System/Library/LaunchAgents/com.apple.rcd.plist
-$ killall -kill rcd
-```
-
-- Pressing the Play button should now open Spotify. If you install an OS upgrade, you may have to repeat the last two steps (replacing the plist file and restarting the daemon).
