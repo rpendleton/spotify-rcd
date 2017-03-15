@@ -5,7 +5,7 @@ language: bash
 script: 
   - bash ./install.sh
 
-after_script:
+before_deploy:
   - bash tar -czvf tweak.tar.gz build/Release/SpotifyRCD.bundle
 
 deploy:
