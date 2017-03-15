@@ -1,0 +1,6 @@
+os: osx
+
+language: bash
+
+script: 
+  - bash ./install.sh
