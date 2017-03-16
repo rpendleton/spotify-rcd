@@ -6,7 +6,7 @@ script:
   - bash ./install.sh
 
 before_deploy:
-  - bash tar -czvf tweak.tar.gz build/Release/SpotifyRCD.bundle
+  - tar -czvf tweak.tar.gz build/Release/SpotifyRCD.bundle
 
 deploy:
   provider: releases
