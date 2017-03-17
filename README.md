@@ -18,12 +18,23 @@ Makes the playback control keys on a MacBook Pro open spotify instead of iTunes.
 - Manual Installation: If you prefer to install the plugin manually, it is
   possible to do so.
 
-  - Compile the tweak and copy the resulting bundle to
-    `/Library/Application Support/Tweaks`
-  - Copy `/System/Library/LaunchAgents/com.apple.rcd.plist` to
-    `/Library/LaunchAgents/com.apple.rcd.patched.plist`
-  - In the copied plist, change the `Label` to `com.apple.rcd.patched`
-  - Add the following section to the copied plist:
+1. Download and extract the tweak.tar.gz file from the [latest build](https://github.com/chrowe/spotify-rcd/releases) or build with `xcodebuild clean build`
+2. copy the resulting bundle to `/Library/Application Support/Tweaks`. e.g.
+  ```
+  sudo mkdir /Library/Application\ Support/Tweaks
+  sudo cp -R ~/Downloads/build/Release/SpotifyRCD.bundle /Library/Application\ Support/Tweaks/
+  ```
+3. Copy `/System/Library/LaunchAgents/com.apple.rcd.plist` to
+    `/Library/LaunchAgents/com.apple.rcd.patched.plist` e.g.
+  ```
+  cp /System/Library/LaunchAgents/com.apple.rcd.plist /Library/LaunchAgents/com.apple.rcd.patched.plist
+  ```
+4. In the copied plist, change the `Label` to `com.apple.rcd.patched` e.g.
+  ```
+  vim /Library/LaunchAgents/com.apple.rcd.patched.plist
+  /Label
+  ```
+5. Add the following section to the copied plist:
 
     ```
     <key>Disabled</key>
@@ -35,7 +46,7 @@ Makes the playback control keys on a MacBook Pro open spotify instead of iTunes.
     </dict>
     ```
 
-  - Unload the system LaunchAgent, and load the modified one:
+6. Unload the system LaunchAgent, and load the modified one:
 
     ```
     $ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
