@@ -15,8 +15,7 @@ Makes the playback control keys on a MacBook Pro open spotify instead of iTunes.
   $ ./install.sh
   ```
 
-- Manual Installation: If you prefer to install the plugin manually, it is
-  possible to do so.
+### Manual Installation: If you prefer to install the plugin manually
 
 1. Download and extract the tweak.tar.gz file from the [latest build](https://github.com/chrowe/spotify-rcd/releases) or build with `xcodebuild clean build`
 2. copy the resulting bundle to `/Library/Application Support/Tweaks`. e.g.
