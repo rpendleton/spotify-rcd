@@ -26,11 +26,11 @@ Makes the playback control keys on a MacBook Pro open spotify instead of iTunes.
 3. Copy `/System/Library/LaunchAgents/com.apple.rcd.plist` to
     `/Library/LaunchAgents/com.apple.rcd.patched.plist` e.g.
   ```
-  cp /System/Library/LaunchAgents/com.apple.rcd.plist /Library/LaunchAgents/com.apple.rcd.patched.plist
+  sudo cp /System/Library/LaunchAgents/com.apple.rcd.plist /Library/LaunchAgents/com.apple.rcd.patched.plist
   ```
 4. In the copied plist, change the `Label` to `com.apple.rcd.patched` e.g.
   ```
-  vim /Library/LaunchAgents/com.apple.rcd.patched.plist
+  sudo vim /Library/LaunchAgents/com.apple.rcd.patched.plist
   /Label
   ```
 5. Add the following section to the copied plist:
@@ -51,6 +51,7 @@ Makes the playback control keys on a MacBook Pro open spotify instead of iTunes.
     $ launchctl unload -w /System/Library/LaunchAgents/com.apple.rcd.plist
     $ launchctl load -w /Library/LaunchAgents/com.apple.rcd.patched.plist
     ```
+**Note**: Do not use sudo as you will get `Service cannot load in requested session` errors
 
 ## Disabling
 
