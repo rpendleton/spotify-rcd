@@ -1,0 +1,20 @@
+os: osx
+osx_image: xcode8.2
+
+language: bash
+
+script: 
+  - bash ./install.sh
+
+before_deploy:
+  - tar -czvf tweak.tar.gz build/Release/SpotifyRCD.bundle
+
+deploy:
+  provider: releases
+  api_key:
+    - secure: "oP66fcarMUjKNTna32BIITaX/1GcDv4fwI4Lj08soDqoj4jYJXfhkS/xXWAS0wk6X10GhfGo7HvMwQ4Jf/TdtpYogVS+5jjCyr72OdYEz6HHGq5GQJ6oq9sTFsJYiIub71AMmekD4UrT0i0LRAm0B1CAywd05/4bcm7GCMYIkBAm+xNVmjWRTLxgwio3YReZIxNzqJ9lMRucefo/sMXUgAX5oTysc1YENUhfbHWHtKQUMY2zE6iNf6hhkpLpzANVNJL3VG3kCKJC3L3WNL+wF7kLYTIlDjobqtZQOwNmM/Y5f7KwD3EqZPWzUWPAX7henMjhIP4fC8Fyy7Q3/5QuePBxvTELfOTmAv3ti96kjCeUqaw/QGEtNu1mWE1j2X5rTgocwzU4VEo2B90QstibQFnJEBez+s2L8mfkBJqkOxn7puoZbf0gcvVIec9GuIofgVmnrV3fJ4LrEdgUCAfSvdo1WW47BNWesqLn1sg8EG62BVq0NvQuRzTo/ANi+Foo9bUQF2qIKVRg2kBEFAjPZc5Vs9ya+3CfVf/Mrco+V4DZzXOk0GmK7fYrGHm+8boz7E9+25yWMs2RY2QJauunoX0d90awvH0AVuJaR3/V1aYT1ZrlRLReMt2rp8hq3thU/JoRWArMT46c/gjl+rtv93Tq39bal+d/OK0FZggH9sE="
+  file_glob: true
+  file: "tweak.tar.gz"
+  skip_cleanup: true
+  on:
+    tags: true
