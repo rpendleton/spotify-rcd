@@ -5,6 +5,14 @@ On a standard installation of macOS, pressing the playback control keys on an
 Apple keyboard opens iTunes if no other media applications are open. The purpose
 of this project is to patch this behavior such that Spotify is opened instead.
 
+## :warning: Catalina support is experimental
+
+This project hasn't worked since High Sierra. This branch is a work-in-progress
+that adds support for Catalina, but the instructions and installer are outdated,
+nor have I tested the changes thoroughly. If you want to try your luck, you can
+use this branch to patch the `com.apple.mediaremoted` launch daemon instead of
+`com.apple.rcd`.
+
 ## :warning: Compatibility
 
 This is the README for the legacy version of the project. The legacy version is

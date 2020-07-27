@@ -9,11 +9,7 @@
 /* Begin PBXBuildFile section */
 		76491CB918E0BCB800803BC4 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 76491CB818E0BCB800803BC4 /* Cocoa.framework */; };
 		76491CC318E0BCB800803BC4 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 76491CC118E0BCB800803BC4 /* InfoPlist.strings */; };
-		7686988419D392BB00BBECD9 /* next.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7686988019D392BB00BBECD9 /* next.wav */; };
-		7686988519D392BB00BBECD9 /* pause.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7686988119D392BB00BBECD9 /* pause.wav */; };
-		7686988619D392BB00BBECD9 /* play.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7686988219D392BB00BBECD9 /* play.wav */; };
-		7686988719D392BB00BBECD9 /* prev.wav in Resources */ = {isa = PBXBuildFile; fileRef = 7686988319D392BB00BBECD9 /* prev.wav */; };
-		76EF46C618E0C6480025394C /* NSAppleScript+SpotifyRCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF46C518E0C6480025394C /* NSAppleScript+SpotifyRCD.m */; };
+		76EF46C618E0C6480025394C /* MRDRemoteControlServer+SpotifyRCD.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF46C518E0C6480025394C /* MRDRemoteControlServer+SpotifyRCD.m */; };
 		76EF46C918E0C6660025394C /* JRSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 76EF46C818E0C6660025394C /* JRSwizzle.m */; };
 /* End PBXBuildFile section */
 
@@ -26,12 +22,7 @@
 		76491CC018E0BCB800803BC4 /* SpotifyRCD-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "SpotifyRCD-Info.plist"; sourceTree = "<group>"; };
 		76491CC218E0BCB800803BC4 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		76491CC418E0BCB800803BC4 /* SpotifyRCD-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SpotifyRCD-Prefix.pch"; sourceTree = "<group>"; };
-		7686988019D392BB00BBECD9 /* next.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = next.wav; sourceTree = "<group>"; };
-		7686988119D392BB00BBECD9 /* pause.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = pause.wav; sourceTree = "<group>"; };
-		7686988219D392BB00BBECD9 /* play.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = play.wav; sourceTree = "<group>"; };
-		7686988319D392BB00BBECD9 /* prev.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; path = prev.wav; sourceTree = "<group>"; };
-		76EF46C418E0C6480025394C /* NSAppleScript+SpotifyRCD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSAppleScript+SpotifyRCD.h"; sourceTree = "<group>"; };
-		76EF46C518E0C6480025394C /* NSAppleScript+SpotifyRCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSAppleScript+SpotifyRCD.m"; sourceTree = "<group>"; };
+		76EF46C518E0C6480025394C /* MRDRemoteControlServer+SpotifyRCD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MRDRemoteControlServer+SpotifyRCD.m"; sourceTree = "<group>"; };
 		76EF46C718E0C6660025394C /* JRSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JRSwizzle.h; sourceTree = "<group>"; };
 		76EF46C818E0C6660025394C /* JRSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JRSwizzle.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -87,10 +78,8 @@
 		76491CBE18E0BCB800803BC4 /* SpotifyRCD */ = {
 			isa = PBXGroup;
 			children = (
-				7686987F19D392BB00BBECD9 /* Sounds */,
 				76491CBF18E0BCB800803BC4 /* Supporting Files */,
-				76EF46C418E0C6480025394C /* NSAppleScript+SpotifyRCD.h */,
-				76EF46C518E0C6480025394C /* NSAppleScript+SpotifyRCD.m */,
+				76EF46C518E0C6480025394C /* MRDRemoteControlServer+SpotifyRCD.m */,
 			);
 			path = SpotifyRCD;
 			sourceTree = "<group>";
@@ -105,18 +94,6 @@
 				76491CC418E0BCB800803BC4 /* SpotifyRCD-Prefix.pch */,
 			);
 			name = "Supporting Files";
-			sourceTree = "<group>";
-		};
-		7686987F19D392BB00BBECD9 /* Sounds */ = {
-			isa = PBXGroup;
-			children = (
-				7686988019D392BB00BBECD9 /* next.wav */,
-				7686988119D392BB00BBECD9 /* pause.wav */,
-				7686988219D392BB00BBECD9 /* play.wav */,
-				7686988319D392BB00BBECD9 /* prev.wav */,
-			);
-			name = Sounds;
-			path = sounds;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -145,15 +122,16 @@
 		76491CAD18E0BCB800803BC4 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0510;
+				LastUpgradeCheck = 1140;
 				ORGANIZATIONNAME = "Inline-Studios";
 			};
 			buildConfigurationList = 76491CB018E0BCB800803BC4 /* Build configuration list for PBXProject "SpotifyRCD" */;
 			compatibilityVersion = "Xcode 3.2";
-			developmentRegion = English;
+			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
 				en,
+				Base,
 			);
 			mainGroup = 76491CAC18E0BCB800803BC4;
 			productRefGroup = 76491CB618E0BCB800803BC4 /* Products */;
@@ -170,11 +148,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7686988719D392BB00BBECD9 /* prev.wav in Resources */,
 				76491CC318E0BCB800803BC4 /* InfoPlist.strings in Resources */,
-				7686988419D392BB00BBECD9 /* next.wav in Resources */,
-				7686988619D392BB00BBECD9 /* play.wav in Resources */,
-				7686988519D392BB00BBECD9 /* pause.wav in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -186,7 +160,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				76EF46C918E0C6660025394C /* JRSwizzle.m in Sources */,
-				76EF46C618E0C6480025394C /* NSAppleScript+SpotifyRCD.m in Sources */,
+				76EF46C618E0C6480025394C /* MRDRemoteControlServer+SpotifyRCD.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -212,18 +186,32 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -250,19 +238,32 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;
@@ -282,6 +283,7 @@
 				GCC_PREFIX_HEADER = "SpotifyRCD/SpotifyRCD-Prefix.pch";
 				INFOPLIST_FILE = "SpotifyRCD/SpotifyRCD-Info.plist";
 				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ryanp.mac.inject.SpotifyRCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
@@ -295,6 +297,7 @@
 				GCC_PREFIX_HEADER = "SpotifyRCD/SpotifyRCD-Prefix.pch";
 				INFOPLIST_FILE = "SpotifyRCD/SpotifyRCD-Info.plist";
 				MACH_O_TYPE = mh_dylib;
+				PRODUCT_BUNDLE_IDENTIFIER = me.ryanp.mac.inject.SpotifyRCD;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = bundle;
 			};
