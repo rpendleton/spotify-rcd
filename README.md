@@ -24,8 +24,8 @@ the MacBook Pro's Touch Bar is unknown.
 ## How it works
 
 spotify-rcd works by [injecting][injection] itself into the `com.apple.rcd`
-system daemon, after which it uses [method swizzling][swizzling] to alter the
-daemon's behavior.
+system launch agent, after which it uses [method swizzling][swizzling] to alter
+the agent's behavior.
 
 (I'd recommend reading this section so that you know what the patch is actually
 doing to your system and what risks it comes with, but you can skip to the
@@ -33,7 +33,7 @@ installation section if you're not interested in the technical details.)
 
 ### Injection
 
-In order to load spotify-rcd into the system daemon, we take advantage of
+In order to load spotify-rcd into the system agent, we take advantage of
 `DYLD_INSERT_LIBRARIES`, an environment variable that allows us to load custom
 images into other processes during launch. (At the moment, this injection vector
 works fine for the needs of this project. However, additional restrictions are
@@ -42,17 +42,17 @@ a matter of time before a new injection vector will be needed.)
 
 For `DYLD_INSERT_LIBRARIES` to work, we have to find some way of setting the
 environment variable in the target process before it is launched. Conveniently,
-macOS allows you to persistently unload system launch daemons and replace them
+macOS allows you to persistently unload system launch agents and replace them
 with your own patched versions as long as the labels are different. As such, all
-we need to do for this to work is copy the system launch daemon configuration,
+we need to do for this to work is copy the system launch agent configuration,
 alter the label to something unique, add our environment variable, and then use
-`launchctl` to persistently disable the system daemon and enable our patched
+`launchctl` to persistently disable the system agent and enable our patched
 version.
 
 ### Swizzling
 
-Now that spotify-rcd has been injected into the system daemon, we actually need
-to alter the daemon's behavior to do what we want. This is where [method
+Now that spotify-rcd has been injected into the system agent, we actually need
+to alter the agent's behavior to do what we want. This is where [method
 swizzling][swizzling] comes in. By intercepting all AppleScript execution, we
 can watch for any requests to launch iTunes and replace those with requests to
 launch Spotify instead.
@@ -65,7 +65,7 @@ this patch tends to be relatively safe.
 
 Unlike other versions of this tweak, installation doesn't require modifying any
 system files. The tweak can also be reverted by simply disabling the patched
-daemon and enabling the unpatched daemon. Given that `com.apple.rcd` isn't a
+agent and enabling the unpatched agent. Given that `com.apple.rcd` isn't a
 critical system service, this makes the liklihood of serious side-effects very
 unlikely.
 
