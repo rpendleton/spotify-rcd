@@ -124,5 +124,5 @@ After the tweak has been disabled, you can completely uninstally it by simply
 deleting the tweak bundle:
 
 ```
-$ rm -rf /Library/Application Support/Tweaks/SpotifyRCD.bundle
+$ rm -rf "/Library/Application Support/Tweaks/SpotifyRCD.bundle"
 ```
